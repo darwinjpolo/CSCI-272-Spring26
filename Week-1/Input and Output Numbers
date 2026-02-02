@@ -6,6 +6,6 @@ int main(){
    
     cin >> num;
    
-    cout << num;
+    cout << "Your number input is: " << num;
   
 }
