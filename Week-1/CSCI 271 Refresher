@@ -1,0 +1,292 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main() { 
+  
+ /* 
+  // integer array
+  
+  const int size_arr_num{4};
+  int total{0};
+  int arr_numbers[size_arr_num] {10,2,5,6};
+  
+  cout << "elements of the interger array are: " << endl;
+  cout << arr_numbers[0] << " ";
+  cout << arr_numbers[1] << " ";
+  cout << arr_numbers[2] << " ";
+  cout << arr_numbers[3] << " ";
+
+  cout << endl << endl;
+  // print the elements of the array using a for loop
+
+  for(int i{0}; i < size_arr_num; ++i) {
+  cout << arr_numbers[i] << " ";
+    total += arr_numbers[i];
+  }
+  cout << "\nsum of the elements of the array is: " << total << endl;
+
+  //arr_numbers.size() << endl;
+
+  // float array
+
+  float arr_floats[6] {13.5,7.7,92.8,54.2};
+
+  cout << "\nelements of the float array are: " << endl;
+  cout << arr_floats[0] << " ";
+  cout << arr_floats[1] << " ";
+  cout << arr_floats[2] << " ";
+  cout << arr_floats[3] << " ";
+
+  arr_floats[2] = 5.67;
+
+  cout << endl << arr_floats[2] << endl; 
+  
+
+
+
+  
+  srand(time(0));
+  
+  int cs_reviews[20]{};
+
+  for(int i{0}; i < 20, ++i) {
+    cs_reviews[i] = 1 + rand() % 5;
+  }
+
+  cout << "cs_reviews[20] = {";
+  for(int i{0}; i < 20, ++i) {
+    cout << cs_reviews[i] << " ";
+  }
+    cout << "}";
+
+  cout << endl;
+
+  int reviews_count[5]{};
+
+  for(int{0}, i < 20, ++i){
+    ++reviews_count[cs_reviews[i] - 1];
+  }
+
+  cout << "reviews_count[5] = {";
+  for(int i{0}; i < 20, ++i) {
+    cout << reviews_count[i] << " ";
+    }
+    cout << "}";
+
+  cout << endl;
+    for (int i{0}; i < 5; ++i) {
+      for (int j{0}; j < i + 1; ++j) {
+        cout << "*";
+        }
+     cout << ": " << reviews_count[i] << endl;
+    }
+  
+
+  // 2D arrays
+
+  int arr[2][3]{{3,5,7},{4,2,9}};
+  
+  cout << arr[0][0] << endl;
+  cout << arr[0][1] << endl;
+  cout << arr[0][2] << endl;
+  cout << arr[1][1] << endl;
+
+  for (int i{0}, i < 2, ++i) {
+    for (int j{0}, j < 3, ++j) << " ";
+    cout << arr[i][j] << " ";
+    }
+  }
+
+
+
+
+  
+  int num{10};
+
+  cout << "address of num is: " << &num << endl;
+
+  int *num_pointer{&num};
+
+  cout << "addres of num, using num_pointer is: " << num_pointer << endl;
+
+  double num2{4.6789};
+  double *num2ptr{&num2};
+
+  cout << "address of num2, using num2ptr is: " << num2ptr << endl;
+
+  int number{10};
+  int *numberptr{&number};
+
+  cout << "number: " << number << endl;
+  cout << "number, using numberptr: " << *numberptr << endl;
+
+
+  // FINAL EXAM REVIEW
+
+  const size_t cars{10};
+
+  int Qtrain[cars]{};
+  
+  // for loop to collect the number of riders for each car
+  for(size_t i{0}; i < cars; ++i) {
+    cout << "Enter the number of riders for car" << i + 1 << ": ";
+    cin >> Qtrain[i];
+  }
+                    
+  // for loop to print the number Qtrain array
+  cout << "Qtrain[10] = { ";
+  for(size_t i{0}; i < cars; ++i) {
+    cout << Qtrain[i] << " ";
+  }
+
+  cout << "}" << endl;
+
+  // for loop to get the cars with riders greater than 50
+  cout << "Cars with riders greater than 50:";
+  for(size_t i{0}; i < cars; ++i) {
+    if(Qtrain[i] > 50) {
+      cout << "car " << i + 1 << " ";
+    }
+  }
+
+  cout << endl;
+  cout << endl;
+
+
+  const int days{3};
+  double daily_temp_2025[days]{};
+  for (int i{0}; i < days; ++i) {
+    cout << "Enter the temperature for day " << i + 1 << ": ";
+    cin >> daily_temp_2025[i];
+  }
+
+  cout << "daily_temp_2025[365] = { ";
+  for (int i{0}; i < days; ++i) {
+    cout << daily_temp_2025[i] << " ";
+  }
+  cout << "}" << endl;
+
+
+  double highest_temp{daily_temp_2025[0]};
+    for (int i{1}; i < days; ++i) {
+      if (daily_temp_2025[i] > highest_temp) {
+        highest_temp = daily_temp_2025[i];
+      }
+    }
+    cout << "The highest temperature in 2025 is " << highest_temp << "degrees Fahrenheit." << endl;
+
+cout << endl;
+cout << endl;
+  
+      const int STUDENTS = 20;
+      int slices[STUDENTS];
+      int totalSlices = 0;
+
+      // Input slices requested by each student
+      for (int i = 0; i < STUDENTS; i++) {
+          cout << "Enter number of slices requested by student " 
+               << i + 1 << ": ";
+          cin >> slices[i];
+          totalSlices += slices[i];
+      }
+
+      // Calculate pizzas needed (8 slices per pizza)
+      int pizzasNeeded = totalSlices / 8;
+      if (totalSlices % 8 != 0) {
+          pizzasNeeded++;   // round up if there are leftover slices
+      }
+
+      // Output results
+      cout << "\nTotal slices requested: " << totalSlices << endl;
+      cout << "Number of pizzas needed: " << pizzasNeeded << endl;
+
+      
+  }
+  
+  
+
+  // FUNCTIONS
+
+  int print_price(int dist) {
+    int price{0};
+    
+    if (dist >= 5000) {
+      price = 1500;
+    }
+    else if (dist >= 2500 && dist < 5000) {
+      price = 1000;
+    }
+    else if (dist >= 1000 && dist < 2500) {
+       price = 500;
+    }
+     else if (dist >= 500 && dist < 1000) {
+      price = 250;
+    }
+      else {
+        price = 100;
+      }
+      return price;
+  }
+
+
+      int main() {
+      int distance{0}, ticket_price{0};
+      cout << "what is the distance covered: ";
+      cin >> distance;
+
+      ticket_price = print_price(distance);
+
+      cout << "For a distance of " << distance << " miles,\n";
+      cout << "You get ticket price of $" << ticket_price << endl;
+    
+  
+
+int productOfTens(int num1, int num2) {
+  int product = 1;
+
+  // Ensure correct order
+  if (num1 > num2) {
+      int temp = num1;
+      num1 = num2;
+      num2 = temp;
+  }
+
+  for (int i = num1; i <= num2; i++) {
+      if (i % 10 == 0) {
+          product *= i;
+      }
+  }
+
+  return product;
+}
+
+int main() {
+  int a, b;
+
+  cout << "Enter two numbers: ";
+  cin >> a >> b;
+
+  int result = productOfTens(a, b);
+
+  cout << "Product of multiples of 10 between "
+       << a << " and " << b << " is: " << result << endl;
+*/
+
+
+int num1 = 7;
+    int num2 = 15;
+
+    // Pointer declarations
+    int* P1 = &num1;
+    int* P2 = &num2;
+
+    // Output using pointers
+    cout << "Address of num1: " << P1 << endl;
+    cout << "Value of num1: " << *P1 << endl;
+
+    cout << "Address of num2: " << P2 << endl;
+    cout << "Value of num2: " << *P2 << endl;
+
+   
+}
