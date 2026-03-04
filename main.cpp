@@ -2,17 +2,16 @@
 Name: Darwin Polo
 Course: CSCI 272 
 Lesson Number: Lesson 4 
-Code Topic: CLass Car Example 
+Code Topic: CLass Person Example 
 Date: 03/03/2026 
 */ 
 
-#include "car.h"
+#include "person.h"
 
 int main() {
-    Car car1;
-
-    car1.startEngine();
-    car1.accelerate();
+    
+    Person person1;
+    person1.introduce();
 
     return 0;
 }
@@ -20,16 +19,15 @@ int main() {
 /* 
 Reflection: 
 1. What I understood: 
-I learned how classes are used in C++ to represent objects and organize
-data and functions together.
+I understood how a class can store data like a person’s name, age, and gender,
+and then using a fucntion to print information about that object from that class.
 2. Difficulties: 
-One of the difficulties I faced when typing this code was forgetting to add
-the "void" before functions in the h file.
+One of the difficulties I faced was using the wrong quotation marks 
+around the characters 'M' and 'F' which caused errors.
 3. Research: 
 I used the website https://exercism.org/ to further my knowledge on C++
 4. AI Usage: 
 None was used for this code
 5. What I learned: 
-I learned how to create a class, create objects from that class and call
-functions that belong to the object.
-*/ 
+I learned how to create a class use the functions from the class while
+also adding "if, "else if" and "else" statements to the code.
